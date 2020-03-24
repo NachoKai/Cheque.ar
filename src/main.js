@@ -1,12 +1,17 @@
 let checkear = document.querySelector('#checkear');
 let checkeo = document.querySelector('#checkeo');
+let webText = document.querySelector('#web-text');
 
 checkear.addEventListener('click', clickCheck);
 checkeo.addEventListener('click', clickCheckBar);
 
 function clickCheck() {
-	randomize();
-	checkeo.className = 'visible';
+	if (webText.value === '') {
+		return '';
+	} else {
+		randomize();
+		checkeo.className = 'visible';
+	}
 }
 
 function clickCheckBar() {

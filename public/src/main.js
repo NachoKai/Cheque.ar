@@ -1,12 +1,17 @@
 let checkear = document.querySelector('#checkear');
 let checkeo = document.querySelector('#checkeo');
+let webText = document.querySelector('#web-text');
 
 checkear.addEventListener('click', clickCheck);
 checkeo.addEventListener('click', clickCheckBar);
 
 function clickCheck() {
-	randomize();
-	checkeo.className = 'visible'
+	if (webText.value === '') {
+		return '';
+	} else {
+		randomize();
+		checkeo.className = 'visible';
+	}
 }
 
 function clickCheckBar() {
@@ -15,7 +20,7 @@ function clickCheckBar() {
 }
 
 function randomize() {
-	$('.progressBar').each(function (index, progressBar) {
+	$('.progressBar').each(function(index, progressBar) {
 		let percentage = $(progressBar).find('.percentage-check');
 		let progress = $(progressBar).find('.progress-check');
 		randNum = Math.floor(Math.random() * 100);
