@@ -10,3 +10,4 @@ Front para el proyecto del Hackatón https://lohackeamosentretodos.com/
 •Bootstrap  
 •Javascript  
 •Nodejs/Express  
+•Heroku  
