@@ -1,0 +1,15 @@
+{
+    "title": "Landing Page",
+    "name": "startbootstrap-landing-page",
+    "version": "5.0.7",
+    "scripts": {
+        "start": "node_modules/.bin/gulp watch"
+    },
+    "description": "An HTML landing page",
+    "license": "MIT",
+    "author": "NC",
+    "dependencies": {
+        "bootstrap": "^4.4.1",
+        "jquery": "3.4.1"
+    }
+}
