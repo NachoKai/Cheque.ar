@@ -10,6 +10,8 @@ function clickCheck() {
 		webText.classList.add('error');
 	} else {
 		randomize();
+		webText.classList.remove('error');
+		webText.value = '';
 		checkeo.className = 'visible';
 	}
 }
@@ -20,7 +22,7 @@ function clickCheckBar() {
 }
 
 function randomize() {
-	$('.progressBar').each(function (index, progressBar) {
+	$('.progressBar').each(function(index, progressBar) {
 		let percentage = $(progressBar).find('.percentage-check');
 		let progress = $(progressBar).find('.progress-check');
 		randNum = Math.floor(Math.random() * 100);
