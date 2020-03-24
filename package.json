@@ -12,6 +12,6 @@
         "bootstrap": "^4.4.1",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
-        "jquery": "3.4.1"
+        "jquery": "^3.4.1"
     }
 }

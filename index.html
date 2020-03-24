@@ -43,8 +43,26 @@
                 <input type="text" class="form-control form-control-lg" placeholder="Ingresar link...">
               </div>
               <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-success">CHEQUEAR</button>
+                <button type="button" id="checkear" class="btn btn-block btn-lg btn-success">CHEQUEAR</button>
               </div>
+
+              <div class="oculto" id="checkeo">
+                <div class="container-check">
+                  <div class="wrapper-check">
+                    <div class="msg-check">Checkeando...</div>
+                    <div class="icons-check">
+                      <i class="fas fa-times"></i>
+                      <div class="progressBar progressBar-animated">
+                        <span class="progress-check"></span>
+                        <span class="percentage-check">80%</span>
+                      </div>
+                      <i class="fas fa-check"></i>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
             </div>
           </form>
         </div>
@@ -224,6 +242,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
+  <script src="src/main.js"></script>
+  <script src="public/src/main.js"></script>
 
 </body>
 
