@@ -7,5 +7,6 @@ Front para el proyecto del Hackatón https://lohackeamosentretodos.com/
 ##Herramientas  
 •HTML  
 •CSS (Scss)  
+•Bootstrap  
 •Javascript  
 •Nodejs/Express  
