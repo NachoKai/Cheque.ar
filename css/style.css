@@ -1,3 +1,17 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -96,6 +110,11 @@ header.masthead h1 {
           box-shadow: 0px 5px 5px 0px #adb5bd;
 }
 
+.testimonials .testimonial-item img:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
 .call-to-action {
   position: relative;
   background-color: #343a40;
@@ -124,6 +143,6 @@ footer a {
   color: white;
 }
 
-footer p {
-  color: white;
+footer a:hover {
+  color: lightblue;
 }

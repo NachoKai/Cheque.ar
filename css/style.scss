@@ -1,3 +1,12 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
 body {
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -15,7 +24,7 @@ h6 {
 header.masthead {
     position: relative;
     background-color: #343a40;
-    background: url("../img/bg-masthead.jpg") no-repeat center center;
+    background: url('../img/bg-masthead.jpg') no-repeat center center;
     background-size: cover;
     padding-top: 8rem;
     padding-bottom: 8rem;
@@ -94,12 +103,16 @@ header.masthead h1 {
 .testimonials .testimonial-item img {
     max-width: 12rem;
     box-shadow: 0px 5px 5px 0px #adb5bd;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
 }
 
 .call-to-action {
     position: relative;
     background-color: #343a40;
-    background: url("../img/bg-masthead.jpg") no-repeat center center;
+    background: url('../img/bg-masthead.jpg') no-repeat center center;
     background-size: cover;
     padding-top: 7rem;
     padding-bottom: 7rem;
@@ -123,9 +136,9 @@ footer.footer {
 footer {
     a {
         color: white;
-    }
 
-    p {
-        color: white;
+        &:hover {
+            color: lightblue;
+        }
     }
 }
