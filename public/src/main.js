@@ -7,9 +7,10 @@ checkeo.addEventListener('click', clickCheckBar);
 
 function clickCheck() {
 	if (webText.value === '') {
-		return '';
+		webText.classList.add('error');
 	} else {
 		randomize();
+		webText.classList.remove('error');
 		checkeo.className = 'visible';
 	}
 }

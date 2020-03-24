@@ -301,3 +301,7 @@ footer a:hover {
   z-index: 99;
   display: block;
 }
+
+.error {
+  border: 2px solid #ED1B24;
+}

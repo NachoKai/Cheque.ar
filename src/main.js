@@ -7,7 +7,7 @@ checkeo.addEventListener('click', clickCheckBar);
 
 function clickCheck() {
 	if (webText.value === '') {
-		return '';
+		webText.classList.add('error');
 	} else {
 		randomize();
 		checkeo.className = 'visible';
@@ -20,7 +20,7 @@ function clickCheckBar() {
 }
 
 function randomize() {
-	$('.progressBar').each(function(index, progressBar) {
+	$('.progressBar').each(function (index, progressBar) {
 		let percentage = $(progressBar).find('.percentage-check');
 		let progress = $(progressBar).find('.progress-check');
 		randNum = Math.floor(Math.random() * 100);
