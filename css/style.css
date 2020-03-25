@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -135,8 +136,8 @@ header.masthead h1 {
 }
 
 footer.footer {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 footer a {
@@ -145,4 +146,162 @@ footer a {
 
 footer a:hover {
   color: lightblue;
+}
+
+.icons-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+.fas {
+  margin: 5px;
+  padding: 5px;
+}
+
+.container-check {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper-check {
+  max-width: 550px;
+  width: 100%;
+  height: auto;
+  padding: 1.25rem;
+  background-color: #2b2d41;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+}
+
+.msg-check {
+  margin-bottom: 1.25rem;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #76d574;
+  font-size: 1.875rem;
+}
+
+.progressBar {
+  height: 1.5625rem;
+  width: 31.25rem;
+  border-radius: 0.25rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #212232;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
+}
+
+.progressBar .progress-check {
+  height: 100%;
+  width: 80%;
+  top: 0;
+  left: 0;
+  margin: auto;
+  background-image: linear-gradient(45deg, #3bcbce, #76d574);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  overflow: hidden;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.progressBar .progress-check::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255, 255, 255, 0.65)));
+  background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65));
+}
+
+.progressBar .percentage-check {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-right: 0.125rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.progressBar-animated span::before {
+  -webkit-animation: progressAnimation 1s ease infinite;
+          animation: progressAnimation 1s ease infinite;
+}
+
+@-webkit-keyframes progressAnimation {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes progressAnimation {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+.oculto {
+  display: none;
+}
+
+.visible {
+  z-index: 99;
+  display: block;
+}
+
+.error {
+  border: 2px solid #ED1B24;
 }

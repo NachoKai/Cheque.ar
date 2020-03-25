@@ -142,3 +142,142 @@ footer {
         }
     }
 }
+
+.icons-check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.fas {
+    margin: 5px;
+    padding: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+$speed:1s;
+$green:#76d574;
+$blue:#3bcbce;
+$background:#2b2d41;
+$white:#ffffff;
+$bodyBackground:#727ab5;
+$fontFamily:'Open Sans',
+sans-serif;
+
+@function rem($value) {
+    @return unquote(($value/1px)/16+"rem");
+}
+
+.container-check {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-check {
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    padding: rem(20px);
+    background-color: $background;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: rem(4px);
+}
+
+.msg-check {
+    margin-bottom: rem(20px);
+    text-align: center;
+    font-family: $fontFamily;
+    color: $green;
+    font-size: rem(30px);
+}
+
+.progressBar {
+    height: rem(25px);
+    width: rem(500px);
+    border-radius: rem(4px);
+    position: relative;
+    overflow: hidden;
+    background-color: darken($background, 5%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
+
+    .progress-check {
+        height: 100%;
+        width: 80%;
+        top: 0;
+        left: 0;
+        margin: auto;
+        background-image: linear-gradient(45deg, $blue, $green);
+        display: inline-flex;
+        position: absolute;
+        overflow: hidden;
+        transition: all ease $speed;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-image: linear-gradient(90deg, transparent, rgba($white, 0.65));
+        }
+    }
+
+    .percentage-check {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        margin-right: rem(2px);
+        font-family: $fontFamily;
+        color: $white;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all ease $speed;
+    }
+
+    &-animated {
+        span {
+            &::before {
+                animation: progressAnimation $speed ease infinite;
+            }
+        }
+    }
+}
+
+
+@keyframes progressAnimation {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.oculto {
+    display: none;
+}
+
+.visible {
+    z-index: 99;
+    display: block;
+}
+
+.error {
+    border: 2px solid #ED1B24;
+}
